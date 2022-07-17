@@ -18,10 +18,10 @@ export const posts = [
   },
   {
     id: 2,
-    title: "Cómo autoarchivar u ordenar los emails en Outlook",
-    canonical: "como-auto-archivar-en-outlook",
+    title: "Cómo bloquear páginas web en Android",
+    canonical: "como-bloquear-paginas-en-android",
     description:
-      "La función Autoarchivar en Outlook es una regla automática que mueve los correos de la bandeja de entrada a una carpeta cada cierto tiempo.",
+      "Android cuenta con un archivo Hosts que permite bloquear el acceso a determinados dominios. La edición de este fichero únicamente es posible si se dispone de acceso root. Si es así, sigue estas indicaciones para modificar el archivo hosts:",
     img: post02,
   },
   {
