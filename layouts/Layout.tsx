@@ -2,6 +2,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Head from "next/head";
 import styled from "styled-components";
+import { useEffect, useState } from "react";
+import CookieConsent from "../components/CookieConsent";
 const DashboardLayoutSt = styled.div`
   width: 100%;
   height: auto;
@@ -25,6 +27,11 @@ const DashboardLayout = (props: props) => {
   //   const removeAccents = (str: string) => {
   //     return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   //   };
+  const [cookieConsent, setCookieConsent] = useState<any>("true");
+
+  useEffect(() => {
+    setCookieConsent(localStorage.getItem("cookieConsent"));
+  });
   return (
     <>
       <Head>
@@ -54,6 +61,7 @@ const DashboardLayout = (props: props) => {
         <Navbar />
         {props.children}
         <Footer />
+        {cookieConsent !== "true" && <CookieConsent setCookieConsent={setCookieConsent} />}
       </DashboardLayoutSt>
     </>
   );
